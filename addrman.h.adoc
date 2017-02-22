@@ -1,0 +1,9 @@
+= addrman.h
+followtheart
+:doctype: article
+:encoding: utf-8
+:lang: en
+:toc: left
+:numbered:
+
+

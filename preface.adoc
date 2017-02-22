@@ -1,0 +1,13 @@
+= 前言
+followtheart
+:doctype: article
+:encoding: utf-8
+:lang: en
+:toc: left
+:numbered:
+
+
+* 本文档的阅读对象是有一定编程基础的技术人员
+* 希望实现的目标是帮助读者快速了解比特币整套系统技术上是如何实现的
+* 主要分析头文件以及重要的cpp文件
+* 重点是比特币整套系统如何协作，编程tips不是本文档的目标
