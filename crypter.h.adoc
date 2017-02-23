@@ -1,0 +1,34 @@
+= 比特币源码分析之钱包加密
+thelastwolf
+:doctype: article
+:encoding: utf-8
+:lang: en
+:toc: left
+:numbered:
+
+ 钱包加密核心内容主要在crypter.h和crypter.cpp中实现
+
+ 从密码学的角度,每个比特币地址都有对应的一个私钥。从私钥可以推导出公钥，得到地址。
+ 私钥代表了地址的所有权，钱包的加密实际上是对私钥的加密。
+ 
+ 钱包私钥加密使用aes-256-cbc算法,
+ aes-256-cbc需要2个参数,IV和key,其中：
+ IV：使用私钥对应公钥经过双重sha256生成
+ Key:使用CMasterKey中的Key。
+ 
+ CMasterKey中的key是随机产生的(wallet.cpp h231),
+ 使用我们输入的密码加密后写入文件
+ 
+ 存储到文件中是加密后的key,即vchCryptedKey,
+ 
+ CMasterKey中的key也使用aes-256-cbc加密,
+ 加密所使用的参数(IV和key),是从我们输入的密码，
+ 以及CMasterKey中nDerivationMethod，nDeriveIterations，salt等参数推导出来的
+ 
+ 
+ 
+ 简要的说：
+1. 随机生成一个秘钥MasterKey,用于加密钱包私钥WalletPriKey的参数
+2. 输入一个密码用于Pass，用户加密MasterKey
+3. 输入的Pass不是直接加密MasterKey,而是用来获取加密Masterkey的参数
+4. 加密后的MasterKey和加密后的钱包私钥都会写入钱包文件
