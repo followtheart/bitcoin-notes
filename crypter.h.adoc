@@ -28,7 +28,7 @@ thelastwolf
  
  
  简要的说：
-1. 随机生成一个秘钥MasterKey,用于加密钱包私钥WalletPriKey的参数
-2. 输入一个密码用于Pass，用户加密MasterKey
-3. 输入的Pass不是直接加密MasterKey,而是用来获取加密Masterkey的参数
+1. 随机生成一个秘钥MasterKey,作为参数用于加密钱包私钥WalletPriKey
+2. 输入一个密码Pass，用于加密MasterKey
+3. 输入的Pass不是直接加密MasterKey,而是用来获取加密Masterkey所需的参数
 4. 加密后的MasterKey和加密后的钱包私钥都会写入钱包文件
