@@ -11,7 +11,8 @@ followtheart
  (椭圆曲线加密算法类似于RSA,是非对称加密的一种,也是比特币地址使用的算法)
  秘钥包含公钥和私钥.私钥可以推出公钥,公钥不能推出私钥.
  
- 在比特币钱包中,我们最常见的34字符钱包地址(如:1F1tAaz5x1HUXrCNLbtMDqcw6o5GNn4xqX),就是秘钥(CKey)的公钥(CPubKey)的引用(CKeyID),经过base58编码得到的.
+ 在比特币钱包中,我们最常见的34字符钱包地址(如:1F1tAaz5x1HUXrCNLbtMDqcw6o5GNn4xqX),
+ 就是秘钥(CKey)的公钥(CPubKey)的引用(CKeyID),经过base58编码得到的.
  
  
  
