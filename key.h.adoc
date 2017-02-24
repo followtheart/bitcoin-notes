@@ -6,13 +6,22 @@ followtheart
 :toc: left
 :numbered:
 
+
+ 这里的秘钥是指椭圆加密算法的秘钥.
+ (椭圆曲线加密算法类似于RSA,是非对称加密的一种,也是比特币地址使用的算法)
+ 秘钥包含公钥和私钥.私钥可以推出公钥,公钥不能推出私钥.
+ 
+ 在比特币钱包中,我们最常见的34字符钱包地址(如:1F1tAaz5x1HUXrCNLbtMDqcw6o5GNn4xqX),就是秘钥(CKey)的公钥(CPubKey)的引用(CKeyID),经过base58编码得到的.
+ 
+ 
+ 
  key.h和key.cpp主要实现了秘钥相关类:CKey,CKeyID,CPubKey.
 
  
 == CKey 秘钥类
  秘钥主要实现在CKey类。
  CKey类包含了对OpenSSL的椭圆曲线秘钥EC_KEY的封装,以及一些签名和校验等操作.
- 椭圆曲线加密类似于RSA,也是非对称加密的一种;私钥可以推出公钥,公钥不能推出私钥.
+
 
 .CKey 类变量
 [width="100%",options="header,footer"]
@@ -28,13 +37,13 @@ followtheart
 .CKey 主要方法
 |====================
 | 方法名称 |解释
-|void MakeNewKey(bool fCompressed) | 随机产生新的秘钥.参数fCompressed 是否压缩公钥
-|bool SetPrivKey(const CPrivKey& vchPrivKey) | 设置私钥为参数给定私钥 
-|bool SetSecret(const CSecret& vchSecret, bool fCompressed = false)  |根据参数vchSecret生成秘钥, 
+| void MakeNewKey(bool fCompressed) | 随机产生新的秘钥.参数fCompressed 是否压缩公钥
+| bool SetPrivKey(const CPrivKey& vchPrivKey) | 设置私钥为参数给定私钥 
+| bool SetSecret(const CSecret& vchSecret, bool fCompressed = false)  | 根据参数vchSecret生成秘钥, 
 
-类似于脑钱包的功能
+ 类似于脑钱包的功能
  
-|CSecret GetSecret(bool &fCompressed) const  | 获取私钥对应的参数
+| CSecret GetSecret(bool &fCompressed) const  | 获取私钥对应的参数
 | CPrivKey GetPrivKey() const  |  获取私钥
 | bool SetPubKey(const CPubKey& vchPubKey)| 设置公钥
 | CPubKey GetPubKey() const|获取公钥
