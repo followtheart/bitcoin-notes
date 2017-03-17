@@ -1,0 +1,70 @@
+= 比特币源码分析之钱包地址和base58编码
+followtheart
+:doctype: article
+:encoding: utf-8
+:lang: en
+:toc: left
+:numbered:
+
+比特币地址有两种:公钥地址和脚本地址.两种地址都使用base58编码,两种地址版本号不同.
+
+## 关于Base58
+
+ Base58编码是从Base64编码演化而来,但是没有base64中的0,I,O,l,+,/等6个字符.
+ 比特币中base58的字符集(有序)如下:
+ "123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz"
+ 
+ 从数和数制的角度来看,Base58可以看做为58进制.
+ 类似的,base2即二进制,base10十进制,base16十六进制,base64六十四进制;当然,我们常用的7位ASCII码表即128进制/base128,扩展的8位ascii码表亦可看做256进制/base256.
+ 
+ 从数和数制的角度来看,base58的编码和解码,是不同数制间的转换.整数的数制转换常用短除法,比特币源码中也是使用这种方法.(是时候翻一翻以前的课本或者百度百科了^_^)
+ 
+## Base58编码解码函数
+
+ 
+[width="100%",options="header,footer"]
+|====================
+| 函数名称 | 释义 
+| std::string EncodeBase58(const unsigned char* pbegin, const unsigned char* pend) | 正常base58编码 
+| std::string EncodeBase58(const std::vector<unsigned char>& vch) | 正常base58编码
+| bool DecodeBase58(const char* psz, std::vector<unsigned char>& vchRet) | 正常base58解码 
+| bool DecodeBase58(const std::string& str, std::vector<unsigned char>& vchRet) | 正常base58解码 
+| std::string EncodeBase58Check(const std::vector<unsigned char>& vchIn) | cell 
+| bool DecodeBase58Check(const char* psz, std::vector<unsigned char>& vchRet) | cell
+| bool DecodeBase58Check(const std::string& str, std::vector<unsigned char>& vchRet)| 
+|==================== 
+ 
+ 
+## CBase58Data类
+ base58编码数据的基类
+
+### 成员变量
+
+* nVersion,版本号
+* vchData,被base58编码的数据.
+ 
+### 成员函数
+ 
+[width="100%",options="header,footer"]
+|====================
+| 方法名 | 说明 
+| SetData(int nVersionIn, const void* pdata, size_t nSize) | 设置vchData 
+| SetData(int nVersionIn, const unsigned char *pbegin, const unsigned char *pend) | 设置vchData 
+| SetString(const char* psz) | 设置vchData 
+| SetString(const std::string& str) | 设置vchData 
+| ToString() | 返回base58check编码的数据(vchData). 比特币地址用本方法生成
+| CompareTo(const CBase58Data& b58)|比较两个数据是否一样
+|====================
+## CBitcoinAddress比特币地址类
+  CBitcoinAddress可以看做给定版本号的CBase58Data.
+  base58编码的比特币地址有两种:
+    
+[width="100%",options="header,footer"]
+|====================
+| 名称| 版本号|生成方法
+| 公共密钥哈希地址 | 版本0（或111测试网络）|数据向量包含RIPEMD160（SHA256（pubkey）），其中pubkey是序列化的公钥 
+| 脚本哈希地址 |具有版本5(或196 testnet) |   数据向量包含RIPEMD160(SHA256(cscript))其中cscript是序列化的兑换脚本.
+|====================
+
+
+## CBitcoinSecret Base58编码的私钥
