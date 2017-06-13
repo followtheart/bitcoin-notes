@@ -1,0 +1,50 @@
+= 比特币源码分析之大数类CBigNum
+followtheart
+:doctype: article
+:encoding: utf-8
+:lang: en
+:toc: left
+:toc-title: 目录
+:numbered:
+
+## 什么是大数?
+    * 大数在日常生活中用不上,多用于科学计算,如素数分解。
+    * 比特币中的大数表示主要通过CBigNum来实现。
+    CBigNum类实现了对Openssl库中大数BIGNUM的封装.
+
+## CBigNum类
+
+[cols="1,2", options="header"]
+.CBigNum
+|===
+| 函数/变量 | 描述
+
+|void setulong(unsigned long n) | 
+|unsigned long getulong() const |
+|unsigned int getuint() const|
+|int getint() const| 将一个大数转换为int类型
+|void setint64(int64 sn)|
+|uint64 getuint64()|
+|void setuint64(uint64 n)|
+|void setuint256(uint256 n)|
+|uint256 getuint256()|
+|void setvch(const std::vector<unsigned char>& vch)|
+|std::vector<unsigned char> getvch() |
+|CBigNum& SetCompact(unsigned int nCompact)|
+|unsigned int GetCompact()|
+
+|void SetHex(const std::string& str)
+|将16进制字符串转换为大数
+
+|std::string ToString(int nBase=10)
+|将大数转换为数字字符串,nBase指定数字的进制数
+
+|std::string GetHex()
+|将大数转换为16进制字符串
+
+|unsigned int GetSerializeSize(int nType=0, int nVersion=PROTOCOL_VERSION)|
+|template<typename Stream>    void Serialize(Stream& s, int nType=0, int nVersion=PROTOCOL_VERSION)|
+|template<typename Stream> void Unserialize(Stream& s, int nType=0, int nVersion=PROTOCOL_VERSION)|
+
+|===
+

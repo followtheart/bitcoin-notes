@@ -1,0 +1,9 @@
+= 比特币源码分析之uint256
+followtheart
+:doctype: article
+:encoding: utf-8
+:lang: en
+:toc: left
+:numbered:
+
+uint256即无符号256位整数
