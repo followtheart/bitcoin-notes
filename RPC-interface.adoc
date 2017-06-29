@@ -1,0 +1,103 @@
+= 钱包RPC接口列表
+followtheart
+:doctype: article
+:encoding: utf-8
+:lang: en
+:toc: left
+:numbered:
+
+
+
+
+# 如何调用RPC
+
+参考：
+https://zh-cn.bitcoin.it/wiki/API_reference_(JSON-RPC)
+
+# RPC列表
+每个RPC的调用方法可以参考:
+https://bitcoin.org/en/developer-reference#rpcs
+
+## addmultisigaddress <nrequired> <'["key","key"]'> [account]
+向钱包添加了一个P2SH multisig地址。  
+  
+## backupwallet
+备份钱包到指定位置
+
+.格式
+   backupwallet <destination>
+   
+.参数 
+[width="100%",options="header,footer"]
+|====================
+| 名称 | 类型|存在|说明 
+|destination | string|必须|备份钱包文件目的地址
+|====================
+
+## checkwallet
+
+.格式
+   checkwallet
+   
+
+## createrawtransaction [{"txid":txid,"vout":n},...] {address:amount,...}
+
+## decoderawtransaction <hex string>
+## dumpprivkey <Zaobi address>
+## encryptwallet <passphrase>
+## getaccount <Zaobi address>
+## getaccountaddress <account>
+## getaddressesbyaccount <account>
+## getbalance [account] [minconf=1]
+## getblock <hash> [txinfo]
+## getblock <number> [txinfo]
+## getblockcount
+## getblockhash <index>
+## getblocktemplate [params]
+## getcheckpoint
+## getconnectioncount
+## getdifficulty
+## getgenerate
+## gethashespersec
+## getinfo
+## getmininginfo
+## getnewaddress [account]
+## getnewpubkey [account]
+## getpeerinfo
+## getrawmempool
+## getrawtransaction <txid> [verbose=0]
+## getreceivedbyaccount <account> [minconf=1]
+## getreceivedbyaddress <Zaobi address> [minconf=1]
+## gettransaction <txid>
+## getwork [data]
+## getworkex [data, coinbase]
+## help [command]
+## importprivkey <Zaobi privkey> [label]
+## keypoolrefill
+## listaccounts [minconf=1]
+## listaddressgroupings
+## listreceivedbyaccount [minconf=1] [includeempty=false]
+## listreceivedbyaddress [minconf=1] [includeempty=false]
+## listsinceblock [blockhash] [target-confirmations]
+## listtransactions [account] [count=10] [from=0]
+## listunspent [minconf=1] [maxconf=9999999]  ["address",...]
+## makekeypair [prefix]
+## move <fromaccount> <toaccount> <amount> [minconf=1] [comment]
+## repairwallet
+## resendtx
+## reservebalance [<reserve> [amount]]
+## sendalert <message> <privatekey> <minver> <maxver> <priority> <id> [cancelupto]
+## sendfrom <fromaccount> <toZaobi address> <amount> [minconf=1] [comment] [comment-to]
+## sendmany <fromaccount> {address:amount,...} [minconf=1] [comment]
+## sendrawtransaction <hex string>
+## sendtoaddress <Zaobi address> <amount> [comment] [comment-to]
+## setaccount <Zaobi address> <account>
+## setgenerate <generate> [genproclimit]
+## settxfee <amount>
+## signmessage <Zaobi address> <message>
+## signrawtransaction <hex string> [{"txid":txid,"vout":n,"scriptPubKey":hex},...] [<privatekey1>,...] [sighashtype="ALL"]
+## stop <detach>
+## submitblock <hex data> [optional-params-obj]
+## validateaddress <Zaobi address>
+## validatepubkey <Zaobi pubkey>
+## verifymessage <Zaobi address> <signature> <message>
