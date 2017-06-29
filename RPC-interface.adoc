@@ -41,29 +41,65 @@ https://bitcoin.org/en/developer-reference#rpcs
    
 
 ## createrawtransaction [{"txid":txid,"vout":n},...] {address:amount,...}
-
+  
+   
 ## decoderawtransaction <hex string>
+    将交易序列化后的十六进制字符串解码为描述交易的JSON对象
+
 ## dumpprivkey <Zaobi address>
+    返回与地址对应的wallet-import-format（WIP）私钥。 （但不将其从钱包中删除。）
+
 ## encryptwallet <passphrase>
+    用密码加密钱包。这只是为了首次启用加密。启用加密后，您将需要输入密码以使用私钥。
+
 ## getaccount <Zaobi address>
+    返回与给定地址相关联的帐户的名称。
+    
 ## getaccountaddress <account>
+    返回当前账号的比特币地址，以及收到此帐户的付款
+
 ## getaddressesbyaccount <account>
+    返回分配给特定帐户的每个地址的列表
+
 ## getbalance [account] [minconf=1]
+    获取钱包余额
+
 ## getblock <hash> [txinfo]
 ## getblock <number> [txinfo]
 ## getblockcount
+    返回本地块链中的块数。
+
 ## getblockhash <index>
+    返回在本地最佳区块链中给定高度的块的hash。
+
+
 ## getblocktemplate [params]
 ## getcheckpoint
 ## getconnectioncount
+    返回到其他节点的连接数。
+
 ## getdifficulty
+    返回当前难度
+    
 ## getgenerate
 ## gethashespersec
+    Deprecated.
+
 ## getinfo
+    输出关于节点和网络的各种信息
+
 ## getmininginfo
+    返回各种挖矿相关信息
+
 ## getnewaddress [account]
+    返回一个新的比特币地址来接收付款
+
 ## getnewpubkey [account]
+
+
 ## getpeerinfo
+    返回有关每个连接的网络节点的信息
+
 ## getrawmempool
 ## getrawtransaction <txid> [verbose=0]
 ## getreceivedbyaccount <account> [minconf=1]
@@ -72,6 +108,8 @@ https://bitcoin.org/en/developer-reference#rpcs
 ## getwork [data]
 ## getworkex [data, coinbase]
 ## help [command]
+    帮助
+    
 ## importprivkey <Zaobi privkey> [label]
 ## keypoolrefill
 ## listaccounts [minconf=1]
