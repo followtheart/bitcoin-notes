@@ -1,4 +1,4 @@
-= 比特币源码分析之钱包地址管理
+= 比特币源码分析之钱包(IP)地址管理
 followtheart
 :doctype: article
 :encoding: utf-8
@@ -6,9 +6,9 @@ followtheart
 :toc: left
 :numbered:
 
-随机钱包地址管理
+随机钱包(IP)地址管理
 
-## 随机地址管理器
+## 随机(IP)地址管理器
 
 ### 设计目标
 

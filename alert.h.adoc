@@ -6,11 +6,73 @@ followtheart
 :toc: left
 :numbered:
 
-升级警告主要用于版本升级
+升级警告主要用于提醒用户版本升级
+
+## 对山寨开发的重要性：一星
+
+偶尔会有变态客户要求提供广播私钥
 
 ## 升级警告
-
 警报用于通知旧版本钱包节点，如果它们过时并且需要升级。
- * 该消息显示在状态栏中。
- * 警报消息作为签名数据的向量广播。
- * 如果警报针对较新版本，则新版本反序列化可能无法读取整个缓冲区，但旧版本仍可以中继原始数据。
+
+* 该消息显示在状态栏中。
+* 警报消息作为签名数据的向量(vector)广播。
+* 如果警报针对较新版本，则新版本无法反序列化读取整个缓冲区，但旧版本仍可以中继原始数据。
+
+
+## CUnsignedAlert类--未签名通告
+没有签名的通告
+
+### 成员变量
+
+* nVersion;版本号
+* nRelayUntil;  when newer nodes stop relaying to newer nodes
+* nExpiration;
+* nID;
+* nCancel;
+* std::set<int> setCancel;
+* nMinVer;            // lowest version inclusive
+* nMaxVer;            // highest version inclusive
+* std::set<std::string> setSubVer;  // empty matches all
+* nPriority;
+
+// Actions
+* std::string strComment;
+* std::string strStatusBar;
+* std::string strReserved;
+
+### 成员函数
+
+[width="100%",options="header,footer"]
+|====================
+| 方法名 | 说明
+| void SetNull()|清空,重置数据为null
+| std::string ToString() const|...
+| void print() const|...
+|====================
+
+
+## CAlert类--通告类
+ 通告类CAlert是序列化的CUnsignedAlert类和签名的组合。
+
+### 成员变量
+
+* vchMsg;//序列化的未签名通告类CUnsignedAlert
+* vchSig;//签名
+
+### 成员函数
+
+[width="100%",options="header,footer"]
+|====================
+| 方法名 | 说明
+|void SetNull();|...
+|bool IsNull() const;|...
+|uint256 GetHash() const;|...
+|bool IsInEffect() const;|...
+|bool Cancels(const CAlert& alert) const;|...
+|bool AppliesTo(int nVersion, std::string strSubVerIn) const;|...
+|bool AppliesToMe() const;|...
+|bool RelayTo(CNode* pnode) const;|...
+|bool CheckSignature() const;|...
+|bool ProcessAlert(bool fThread = true);|...
+|====================
