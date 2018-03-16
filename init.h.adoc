@@ -1,0 +1,25 @@
+= 比特币源码分析
+followtheart
+:doctype: book
+:encoding: utf-8
+:lang: en
+:toc: left
+:numbered:
+
+ 定义了一些函数
+
+## 山寨开发关注度：1星
+
+几乎无人过问此处
+
+## 全局函数
+
+[width="100%",options="header,footer"]
+|====================
+| 方法名 | 说明
+| void StartShutdown();|
+| bool ShutdownRequested();|
+| void Shutdown();|
+| bool AppInit2(boost::thread_group& threadGroup);| 主程序流程入口,main()->appinit()->AppInit2()
+| std::string HelpMessage();| 显示UI和守护进程之间共享的的选项
+|====================

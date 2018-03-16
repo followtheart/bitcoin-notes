@@ -1,0 +1,27 @@
+= 比特币源码分析
+followtheart
+:doctype: book
+:encoding: utf-8
+:lang: en
+:toc: left
+:numbered:
+
+## 对山寨开发的重要性：五星
+
+基本上每个客户都会要求修改钱包地址首字母
+
+## CBase58Data类
+ base58编码数据的基类
+
+### 成员变量
+
+* nVersion,版本号
+* vchData,被base58编码的数据.
+
+### 成员函数
+
+[width="100%",options="header,footer"]
+|====================
+| 方法名 | 说明
+|*****|*****
+|====================
