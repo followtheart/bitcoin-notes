@@ -1,0 +1,83 @@
+= 比特币源码分析之数据库操作
+followtheart
+:doctype: book
+:encoding: utf-8
+:lang: en
+:toc: left
+:numbered:
+
+ 实现了对berkleydb的封装
+
+## 山寨开发关注度：零星
+
+ 相对底层的东西 , 客户从没提起过
+
+## 全局函数
+
+[width="100%",options="header,footer"]
+|====================
+| 方法名 | 说明
+|void ThreadFlushWalletDB(const std::string& strWalletFile);|...
+|bool BackupWallet(const CWallet& wallet, const std::string& strDest);|钱包备份
+|====================
+
+## CDBEnv类--berkleydb上下文
+封装了一个berkleydb的上下文环境DbEnv类以及相关操作
+
+### 成员变量
+ * fDbEnvInit;
+ * fMockDb;
+ * path;
+ * cs_db;
+ * dbenv,数据库环境,berkleydb的DbEnv 数据库环境
+ * mapFileUseCount;
+ * mapDb;
+
+### 成员函数
+
+[width="100%",options="header,footer"]
+|====================
+| 方法名 | 说明
+| void EnvShutdown();|关闭数据库环境
+| void MakeMock();|
+| bool IsMock()   |
+| VerifyResult Verify(std::string strFile, bool (*recoverFunc)(CDBEnv& dbenv, std::string strFile));   |
+| bool Salvage(std::string strFile, bool fAggressive, std::vector<KeyValPair>& vResult);   |
+从没有通过verify的文件中提取数据
+| bool Open(const boost::filesystem::path &path);|...
+| void Close();|...
+| void Flush(bool fShutdown);|...
+| void CheckpointLSN(std::string strFile);|...
+| void CloseDb(const std::string& strFile);|...
+| bool RemoveDb(const std::string& strFile);|...
+| DbTxn *TxnBegin(int flags=DB_TXN_WRITE_NOSYNC)|...
+|====================
+
+## CDB 类--berkleydb的RAII封装
+
+### 成员变量
+* pdb;
+* std::string strFile;
+* DbTxn *activeTxn;
+* bool fReadOnly;
+
+### 成员函数
+[width="100%",options="header,footer"]
+|====================
+| 方法名 | 说明
+| explicit CDB(const char* pszFile, const char* pszMode="r+");|...
+| void Flush();|...
+| void Close();|...
+| bool Read(const K& key, T& value)   |读
+| bool Write(const K& key, const T& value, bool fOverwrite=true)   | 写
+| bool Erase(const K& key)   | 擦除
+| bool Exists(const K& key)   | 是否存在
+| Dbc* GetCursor()   | 获取光标
+| int ReadAtCursor(Dbc* pcursor, CDataStream& ssKey, CDataStream& ssValue, unsigned int fFlags=DB_NEXT)   |
+| bool TxnBegin()   |
+| bool TxnCommit()   |
+| bool TxnAbort()   |
+| bool ReadVersion(int& nVersion)   |
+| bool WriteVersion(int nVersion)   |
+| bool static Rewrite(const std::string& strFile, const char* pszSkip = NULL);   |
+|====================
