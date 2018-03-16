@@ -1,0 +1,25 @@
+= 比特币源码分析
+followtheart
+:doctype: book
+:encoding: utf-8
+:lang: en
+:toc: left
+:numbered:
+
+Checkpoint将在编译完成后进行区块链完整性检查。
+它们每更新一次或三次更新。
+
+## 对山寨开发的重要性：五星
+
+必须修改，否则钱包无法正确运行
+
+## 几个函数
+
+[width="100%",options="header,footer"]
+|====================
+| 方法名 | 说明
+| bool CheckBlock(int nHeight, const uint256& hash);|Returns true if block passes checkpoint checks
+| int GetTotalBlocksEstimate()|Return conservative estimate of total number of blocks, 0 if unknown
+|    CBlockIndex* GetLastCheckpoint(const std::map<uint256, CBlockIndex*>& mapBlockIndex);   |    // Returns last CBlockIndex* in mapBlockIndex that is a checkpoint |
+|  double GuessVerificationProgress(CBlockIndex *pindex);|...|
+|====================
