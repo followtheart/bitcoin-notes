@@ -1,9 +1,25 @@
-= clientversion.h
+= 比特币源码分析之客户端版本信息
 followtheart
-:doctype: article
+:doctype: book
 :encoding: utf-8
 :lang: en
 :toc: left
 :numbered:
 
+## 对山寨开发的重要性：二星
 
+大部分客户都会要求修改版本信息
+
+## CBase58Data
+
+## 版本号
+
+[width="100%",options="header,footer"]
+|====================
+| 方法名 | 说明
+| #define CLIENT_VERSION_MAJOR       0|...
+| #define CLIENT_VERSION_MINOR       8|...
+| #define CLIENT_VERSION_REVISION    6|...
+| #define CLIENT_VERSION_BUILD       0|...
+| #define COPYRIGHT_YEAR          2013| 版权截至年份   |
+|====================
