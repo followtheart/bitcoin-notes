@@ -1,0 +1,57 @@
+= 比特币源码分析之布隆过滤器
+followtheart
+:doctype: book
+:encoding: utf-8
+:lang: en
+:toc: left
+:numbered:
+
+  * Bloom filter是由Howard Bloom在1970年提出的二进制向量数据结构,用来检测一个元素是不是集合中的一个成员。
+  如果检测结果为是，该元素不一定在集合中；但如果检测结果为否，该元素一定不在集合中
+  * Bloom filter是为SPV客户端提供的概率过滤器，以便可以过滤我们发送的交易。这可以显着提高交易和块下载的效率。
+  * 因为布隆过滤器是概率性的，所以SPV节点可以增加假阳性率，使我们向他们发送实际上并不是他们自己的交易，允许客户通过混淆他们拥有的密钥来交易更多带宽以获得更多隐私。
+
+
+## 对山寨开发的重要性：一星
+
+基本上没有客户会问到这个
+
+## CBloomFilter类--布隆过滤器
+
+
+### 成员变量
+* vData
+* isFull
+* isEmpty
+* nHashFuncs
+* nTweak
+* nFlags
+
+### 成员函数
+
+[width="100%",options="header,footer"]
+|====================
+| 方法名 | 说明
+| CBloomFilter(unsigned int nElements, double nFPRate, unsigned int nTweak, unsigned char nFlagsIn)| 创建一个新的布隆过滤器，它将在填充给定数量的元素时提供给定的fp速率
+请注意，如果给定的参数将导致超出协议限制范围的过滤器，则创建的过滤器将在协议限制范围内尽可能接近给定参数。
+如果nFPRate非常低或nElements不合理地高，这将适用。
+nTweak是一个添加到传递给散列函数的种子值的常量
+它通常应该是一个随机值（并且主要仅用于单元测试）
+nFlags应该是BLOOM_UPDATE_ *枚举之一（不是_MASK）
+| CBloomFilter() : isFull(true) {}|...
+| void insert(const std::vector<unsigned char>& vKey);|...
+| void insert(const COutPoint& outpoint);|...
+| void insert(const uint256& hash);|...
+
+| bool contains(const std::vector<unsigned char>& vKey) const;|...
+| bool contains(const COutPoint& outpoint) const;|...
+| bool contains(const uint256& hash) const;|...
+
+| bool IsWithinSizeConstraints() const;|True if the size is <= MAX_BLOOM_FILTER_SIZE and the number of hash functions is <= MAX_HASH_FUNCS
+// (catch a filter which was just deserialized which was too big)
+
+| bool IsRelevantAndUpdate(const CTransaction& tx, const uint256& hash);|
+
+| void UpdateEmptyFull();| 检查空的和满的过滤器，以避免浪费cpu
+
+|====================
