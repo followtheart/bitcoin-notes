@@ -1,9 +1,17 @@
-= compact.h
-Author Name
-:doctype: article
+= 比特币源码分析
+followtheart
+:doctype: book
 :encoding: utf-8
 :lang: en
 :toc: left
 :numbered:
 
+为跨平台定义了一些宏,封装了closesocket
 
+## 对山寨开发的重要性：零星
+
+从来没人问及此处
+
+
+## myclosesocket函数
+实现了一个跨平台的closesocket函数
