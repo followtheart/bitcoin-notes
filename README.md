@@ -1,5 +1,7 @@
 # bitcoin-notes 比特币源码简单分析
 
+<a target="_blank" href="http://shang.qq.com/wpa/qunwpa?idkey=0fef5aa161c5074030c3f2e99c6d564a4c68d469f187c08530d270e15714e7c2"><img border="0" src="http://pub.idqqimg.com/wpa/images/group.png" alt="zaobi.org官方群" title="zaobi.org官方群">130313918</a>
+
 主要是对源码的注解,也有一些总结性的东西.***仅供参考,欢迎反馈***
 
 源码的注解重点是头文件(头文件明白了,cpp文件基本也没问题).
