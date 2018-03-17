@@ -1,0 +1,61 @@
+= 比特币源码分析
+followtheart
+:doctype: book
+:encoding: utf-8
+:lang: en
+:toc: left
+:numbered:
+
+## 山寨开发关注度：五星
+
+基本上每个客户都会要求修改钱包地址首字母
+
+## CLevelDBBatch类
+ 批量排队写入CLevelDB的更改
+
+### 成员变量
+
+* batch
+
+### 成员函数
+
+[width="100%",options="header,footer"]
+|====================
+| 方法名 | 说明
+| template<typename K, typename V> void Write(const K& key, const V& value)| 写入
+| template<typename K> void Erase(const K& key)   | 擦除
+|====================
+
+## CLevelDB类
+ CLevelDB
+
+### 成员变量
+
+ * leveldb::Env *penv;此数据库正在使用的自定义环境（在默认环境下可能为NULL）
+
+ * leveldb::Options options;//使用的数据库选项
+
+ * leveldb::ReadOptions readoptions;//从数据库读取时使用的选项
+
+ * leveldb::ReadOptions iteroptions;//遍历数据库值时使用的选项
+
+ * leveldb::WriteOptions writeoptions;//写入数据库时使用的选项
+
+ * leveldb::WriteOptions syncoptions;//同步写入数据库时使用的选项
+
+ * leveldb::DB *pdb;//数据库本身
+
+### 成员函数
+
+[width="100%",options="header,footer"]
+|====================
+| 方法名 | 说明
+| template<typename K, typename V> bool Read(const K& key, V& value)|
+| template<typename K, typename V> bool Write(const K& key, const V& value, bool fSync = false)|
+| template<typename K> bool Exists(const K& key)    |
+| template<typename K> bool Erase(const K& key, bool fSync = false)   |
+| bool WriteBatch(CLevelDBBatch &batch, bool fSync = false)   |
+| bool Flush()    |//不可用于LevelDB; 提供与BDB的兼容性
+| bool Sync()    |
+| leveldb::Iterator *NewIterator()   |  不完全干净的封装，但它现在是最简单的
+|====================
