@@ -1,0 +1,35 @@
+= 比特币源码分析
+followtheart
+:doctype: book
+:encoding: utf-8
+:lang: en
+:toc: left
+:numbered:
+
+ 定义了各种客户端版本相关信息
+
+## 山寨开发关注度：五星
+
+基本上每个客户都会要求修改钱包地址首字母
+
+## 全局变量
+
+[width="100%",options="header,footer"]
+|====================
+| 方法名 | 说明
+| CLIENT_VERSION | 客户端版本,
+                         +  1000000 * CLIENT_VERSION_MAJOR
+                         +   10000 * CLIENT_VERSION_MINOR
+                         +     100 * CLIENT_VERSION_REVISION
+                         +       1 * CLIENT_VERSION_BUILD;|...
+| CLIENT_NAME |...
+| CLIENT_BUILD |...
+| CLIENT_DATE |...
+| PROTOCOL_VERSION | 网络协议版本
+| MIN_PROTO_VERSION = 209 |从2012年2月起，不支持早期版本，并断开连接
+| CADDR_TIME_VERSION = 31402 | nTime字段添加到CAddress，从此版本开始;如果可能的话，避免请求比此更早的地址节点
+| NOBLKS_VERSION_START = 32000| 仅请求来自此范围之外的节点的块
+| NOBLKS_VERSION_END = 32400| 仅请求来自此范围之外的节点的块
+| BIP0031_VERSION = 60000;|// BIP 0031，pong消息，在此之后的所有版本中都已启用
+| MEMPOOL_GD_VERSION = 60002;|//“mempool”命令，增强的“getdata”行为从此版本开始：
+|====================

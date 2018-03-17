@@ -1,2 +1,40 @@
+= 比特币源码分析之mruset
+followtheart
+:doctype: book
+:encoding: utf-8
+:lang: en
+:toc: left
+:numbered:
 
+ 类似STL的集合容器只保留最近的N个元素。
 
+## 山寨开发关注度：1星
+一般不会有客户要求定制此处
+
+## limitedmap
+ 类似STL的映射容器只保留最近的N个元素。
+
+### 成员变量
+
+ * key_type;
+ * mapped_type;
+ * value_type;
+ * const_iterator;
+ * size_type;
+
+### 成员函数
+
+[width="100%",options="header,footer"]
+|====================
+| 方法名 | 说明
+| mruset(size_type nMaxSizeIn = 0)|
+| const_iterator begin()|
+| const_iterator end() |
+| size_type size() |
+| bool empty() |
+| const_iterator find(const key_type& k) |
+| size_type count(const key_type& k) |
+| void insert(const value_type& x) |
+| size_type max_size()    |
+| size_type max_size(size_type s)   |
+|====================

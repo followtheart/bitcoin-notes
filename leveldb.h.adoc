@@ -1,4 +1,4 @@
-= 比特币源码分析
+= 比特币源码分析之leveldb
 followtheart
 :doctype: book
 :encoding: utf-8
@@ -6,8 +6,9 @@ followtheart
 :toc: left
 :numbered:
 
-## 山寨开发关注度：五星
+ 实现了对leveldb的封装
 
+## 山寨开发关注度：五星
 基本上每个客户都会要求修改钱包地址首字母
 
 ## CLevelDBBatch类

@@ -1,0 +1,80 @@
+= 比特币源码分析
+followtheart
+:doctype: book
+:encoding: utf-8
+:lang: en
+:toc: left
+:numbered:
+
+## 山寨开发关注度：五星
+
+基本上每个客户都会要求修改钱包地址首字母
+
+## 全局函数
+
+[width="100%",options="header,footer"]
+|====================
+| 方法名 | 说明
+|static inline unsigned short GetDefaultPort(const bool testnet = fTestNet)|
+|====================
+
+
+## CMessageHeader类
+ base58编码数据的基类
+
+### 成员变量
+
+ * pchMessageStart[MESSAGE_START_SIZE];  (4) message start.
+ * pchCommand[COMMAND_SIZE]; (12) command.
+ * nMessageSize; (4) size.
+ * nChecksum; (4) checksum.
+
+### 成员函数
+
+[width="100%",options="header,footer"]
+|====================
+| 方法名 | 说明
+| CMessageHeader();|
+| CMessageHeader(const char* pszCommand, unsigned int nMessageSizeIn);|
+| std::string GetCommand() const;|
+| bool IsValid() const;|
+|====================
+
+## CAddress类
+ CService 附带作为peer的相关信息
+
+### 成员变量
+
+ * nServices;
+ * unsigned int nTime;//disk and network only
+ * int64 nLastTry;// memory only
+
+### 成员函数
+
+[width="100%",options="header,footer"]
+|====================
+| 方法名 | 说明
+| CAddress();|...
+| explicit CAddress(CService ipIn, uint64 nServicesIn=NODE_NETWORK);|...
+| void Init();|...
+| void print() const;|...
+|====================
+
+## CInv类
+ inv message data
+
+### 成员变量
+
+ * int type;
+ * uint256 hash;
+
+### 成员函数
+
+[width="100%",options="header,footer"]
+|====================
+| 方法名 | 说明
+| bool IsKnownType() const;|
+| const char* GetCommand() const;|
+| std::string ToString() const;|
+| void print() const;|
+|====================
