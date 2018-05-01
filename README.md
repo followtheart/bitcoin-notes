@@ -1,5 +1,11 @@
 # bitcoin-notes 比特币源码简单分析
 
+比特币最大的问题是挖矿,算力的集中,与其去中心化的理想背道而驰.
+
+这是对现实的折中,也使其有了被主流接受的可能.
+
+如果去中心化最终成为主流,比特币将因此被淘汰.
+
 <a target="_blank" href="http://shang.qq.com/wpa/qunwpa?idkey=0fef5aa161c5074030c3f2e99c6d564a4c68d469f187c08530d270e15714e7c2"><img border="0" src="http://pub.idqqimg.com/wpa/images/group.png" alt="zaobi.org官方群" title="zaobi.org官方群">130313918</a>
 
 主要是对源码的注解,也有一些总结性的东西.***仅供参考,欢迎反馈***
