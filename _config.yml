@@ -1,2 +1,4 @@
-theme: jekyll-theme-cayman
-- jemoji
+theme: jekyll-theme-architect
+
+plugins:
+  - jemoji

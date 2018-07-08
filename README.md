@@ -2,7 +2,9 @@
 <a target="_blank" href="http://shang.qq.com/wpa/qunwpa?idkey=0fef5aa161c5074030c3f2e99c6d564a4c68d469f187c08530d270e15714e7c2"><img border="0" src="https://pub.idqqimg.com/wpa/images/group.png" alt="zaobi.org官方群" title="zaobi.org官方群">130313918</a>
 
 <img border="0" height="300px" src="./images/Q.jpg">
+
 ### 吐槽
+
 比特币最大的问题是挖矿,算力的集中,与其去中心化的理想背道而驰.
 
 这是对现实的折中,也使其有了被主流接受的可能.
