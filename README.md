@@ -22,16 +22,16 @@
 ### 文件目录
 <table>
   <tr>
-    <th width=33%, bgcolor=gray >文件名</th>
-    <th width=10%, bgcolor=gray>状态</th>
+    <th >头文件</th>
+    <th >状态</th>
   </tr>
   <tr>
     <td> <a href="addrman.h.adoc">addrman.h</a> </td>
-    <td > :white_check_mark: </td>
+    <td > :heavy_check_mark: </td>
   </tr>
   <tr>
     <td> <a href="alert.h.adoc">alert.h</a> </td>
-    <td > :white_check_mark: </td>
+    <td > :heavy_check_mark: </td>
   </tr>
   <tr>
     <td> <a href="allocators.h.adoc">allocators.h</a> </td>
@@ -39,23 +39,23 @@
   </tr>
   <tr>
     <td> <a href="base58.h.adoc">base58.h</a> </td>
-    <td > :white_check_mark: </td>
+    <td > :heavy_check_mark: </td>
   </tr>
   <tr>
     <td> <a href="bignum.h.adoc">bignum.h</a> </td>
-    <td > :white_check_mark: </td>
+    <td > :heavy_check_mark: </td>
   </tr>
   <tr>
     <td> <a href="bitcoinrpc.h.adoc">bitcoinrpc.h</a> </td>
-    <td > :white_check_mark: </td>
+    <td > :heavy_check_mark: </td>
   </tr>
   <tr>
     <td> <a href="bloom.h.adoc">bloom.h</a> </td>
-    <td > :white_check_mark: </td>
+    <td > :heavy_check_mark: </td>
   </tr>
   <tr>
     <td> <a href="checkpoints.h.adoc">checkpoints.h</a> </td>
-    <td > :white_check_mark: </td>
+    <td > :heavy_check_mark: </td>
   </tr>
   <tr>
     <td> <a href="checkqueue.h.adoc">checkqueue.h</a> </td>
@@ -67,19 +67,19 @@
   </tr>
     <tr>
     <td> <a href="compat.h.adoc">compat.h</a> </td>
-    <td > :white_check_mark: </td>
+    <td > :heavy_check_mark: </td>
   </tr>
   <tr>
     <td> <a href="crypter.h.adoc">crypter.h</a> </td>
-    <td > :white_check_mark: </td>
+    <td > :heavy_check_mark: </td>
   </tr>
   <tr>
     <td> <a href="db.h.adoc">db.h</a> </td>
-    <td > :white_check_mark: </td>
+    <td > :heavy_check_mark: </td>
   </tr>
   <tr>
     <td> <a href="hash.h.adoc">hash.h</a> </td>
-    <td > :white_check_mark: </td>
+    <td > :heavy_check_mark: </td>
   </tr>
   <tr>
     <td> <a href="init.h.adoc">init.h</a> </td>
@@ -87,19 +87,19 @@
   </tr>
     <tr>
       <td> <a href="key.h.adoc">key.h</a> </td>
-      <td > :white_check_mark: </td>
+      <td > :heavy_check_mark: </td>
     </tr>
     <tr>
       <td> <a href="keystore.h.adoc">keystore.h</a> </td>
-      <td > :white_check_mark: </td>
+      <td > :heavy_check_mark: </td>
     </tr>
     <tr>
       <td> <a href="leveldb.h.adoc">leveldb.h</a> </td>
-      <td > :white_check_mark: </td>
+      <td > :heavy_check_mark: </td>
     </tr>
     <tr>
       <td> <a href="limitedmap.h.adoc">limitedmap.h</a> </td>
-      <td > :white_check_mark: </td>
+      <td > :heavy_check_mark: </td>
     </tr>
   <tr>
     <td> <a href="main.h.adoc">main.h</a> </td>
@@ -107,11 +107,11 @@
   </tr>
   <tr>
     <td> <a href="mruset.h.adoc">mruset.h</a> </td>
-    <td > :white_check_mark: </td>
+    <td > :heavy_check_mark: </td>
   </tr>
   <tr>
     <td> <a href="netbase.h.adoc">netbase.h</a> </td>
-    <td > :white_check_mark: </td>
+    <td > :heavy_check_mark: </td>
   </tr>
   <tr>
     <td> <a href="net.h.adoc">net.h</a> </td>
@@ -119,7 +119,7 @@
   </tr>
   <tr>
     <td> <a href="protocol.h.adoc">protocol.h</a> </td>
-    <td > :white_check_mark: </td>
+    <td > :heavy_check_mark: </td>
   </tr>
   <tr>
     <td> <a href="script.h.adoc">script.h</a> </td>
@@ -155,11 +155,11 @@
   </tr>
   <tr>
     <td> <a href="version.h.adoc">version.h</a> </td>
-    <td > :white_check_mark: </td>
+    <td > :heavy_check_mark: </td>
   </tr>
   <tr>
     <td> <a href="walletdb.h.adoc">walletdb.h</a> </td>
-    <td > :white_check_mark: </td>
+    <td > :heavy_check_mark: </td>
   </tr>
   <tr>
     <td> <a href="wallet.h.adoc">wallet.h</a> </td>
