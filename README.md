@@ -16,6 +16,155 @@
 
 本项目主要针对**山寨币开发者**，各路大牛请绕道
 
+### 文件目录
+
+<table>
+  <tr>
+    <th width=33%, bgcolor=gray >文件名</th>
+    <th width=10%, bgcolor=gray>状态</th>
+  </tr>
+  <tr>
+    <td> addrman.h </td>
+    <td bgcolor=SpringGreen> √ </td>
+  </tr>
+  <tr>
+    <td> alert.h </td>
+    <td bgcolor=SpringGreen> √ </td>
+  </tr>
+  <tr>
+    <td> allocators.h </td>
+    <td bgcolor=OrangeRed > × </td>
+  </tr>
+  <tr>
+    <td> base58.h </td>
+    <td bgcolor=SpringGreen> √ </td>
+  </tr>
+  <tr>
+    <td> bignum.h </td>
+    <td bgcolor=SpringGreen> √ </td>
+  </tr>
+  <tr>
+    <td> bitcoinrpc.h </td>
+    <td bgcolor=SpringGreen> √ </td>
+  </tr>
+  <tr>
+    <td> bloom.h </td>
+    <td bgcolor=SpringGreen> √ </td>
+  </tr>
+  <tr>
+    <td> checkpoints.h </td>
+    <td bgcolor=SpringGreen> √ </td>
+  </tr>
+  <tr>
+    <td> checkqueue.h </td>
+    <td bgcolor=yellow> ... </td>
+  </tr>
+  <tr>
+    <td> clientversion.h </td>
+    <td bgcolor=yellow> ... </td>
+  </tr>
+    <tr>
+    <td> compat.h </td>
+    <td bgcolor=SpringGreen> √ </td>
+  </tr>
+  <tr>
+    <td> crypter.h </td>
+    <td bgcolor=SpringGreen> √ </td>
+  </tr>
+  <tr>
+    <td> db.h </td>
+    <td bgcolor=SpringGreen> √ </td>
+  </tr>
+  <tr>
+    <td> hash.h </td>
+    <td bgcolor=SpringGreen> √ </td>
+  </tr>
+  <tr>
+    <td> init.h </td>
+    <td bgcolor=yellow> ... </td>
+  </tr>
+    <tr>
+      <td> key.h </td>
+      <td bgcolor=SpringGreen> √ </td>
+    </tr>
+    <tr>
+      <td> keystore.h </td>
+      <td bgcolor=SpringGreen> √ </td>
+    </tr>
+    <tr>
+      <td> leveldb.h </td>
+      <td bgcolor=SpringGreen> √ </td>
+    </tr>
+    <tr>
+      <td> limitedmap.h </td>
+      <td bgcolor=SpringGreen> √ </td>
+    </tr>
+  <tr>
+    <td> main.h </td>
+    <td bgcolor=OrangeRed> × </td>
+  </tr>
+  <tr>
+    <td> mruset.h </td>
+    <td bgcolor=SpringGreen> √ </td>
+  </tr>
+  <tr>
+    <td> netbase.h </td>
+    <td bgcolor=SpringGreen> √ </td>
+  </tr>
+  <tr>
+    <td> net.h </td>
+    <td bgcolor=OrangeRed > X </td>
+  </tr>
+  <tr>
+    <td> protocol.h </td>
+    <td bgcolor=SpringGreen> √ </td>
+  </tr>
+  <tr>
+    <td> script.h </td>
+    <td bgcolor=OrangeRed > X </td>
+  </tr>  
+  <tr>
+      <td> ui_interface.h </td>
+      <td bgcolor=OrangeRed > X </td>
+    </tr>
+  <tr>
+    <td> serialize.h </td>
+    <td bgcolor=OrangeRed > X </td>
+  </tr>
+  <tr>
+    <td> sync.h </td>
+    <td bgcolor=OrangeRed > X </td>
+  </tr>
+  <tr>
+    <td> threadsafety.h </td>
+    <td bgcolor=OrangeRed > X </td>
+  </tr>
+  <tr>
+    <td> txdb.h </td>
+    <td bgcolor=OrangeRed > X </td>
+  </tr>
+  <tr>
+    <td> uint256.h </td>
+    <td bgcolor=OrangeRed > X </td>
+  </tr>
+  <tr>
+    <td> util.h </td>
+    <td bgcolor=OrangeRed > X </td>
+  </tr>
+  <tr>
+    <td> version.h </td>
+    <td bgcolor=SpringGreen> √ </td>
+  </tr>
+  <tr>
+    <td> walletdb.h </td>
+    <td bgcolor=SpringGreen> √ </td>
+  </tr>
+  <tr>
+    <td> wallet.h </td>
+    <td bgcolor=OrangeRed > X </td>
+  </tr>
+</table>
+
 ### 前置知识
 
 * C++
