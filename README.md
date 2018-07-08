@@ -20,152 +20,45 @@
 本项目主要针对**山寨币开发者**，各路大牛请绕道
 
 ### 文件目录
-<table>
-  <tr>
-    <th >头文件</th>
-    <th >状态</th>
-  </tr>
-  <tr>
-    <td> <a href="addrman.h.adoc">addrman.h</a> </td>
-    <td > :heavy_check_mark: </td>
-  </tr>
-  <tr>
-    <td> <a href="alert.h.adoc">alert.h</a> </td>
-    <td > :heavy_check_mark: </td>
-  </tr>
-  <tr>
-    <td> <a href="allocators.h.adoc">allocators.h</a> </td>
-    <td > :x:</td>
-  </tr>
-  <tr>
-    <td> <a href="base58.h.adoc">base58.h</a> </td>
-    <td > :heavy_check_mark: </td>
-  </tr>
-  <tr>
-    <td> <a href="bignum.h.adoc">bignum.h</a> </td>
-    <td > :heavy_check_mark: </td>
-  </tr>
-  <tr>
-    <td> <a href="bitcoinrpc.h.adoc">bitcoinrpc.h</a> </td>
-    <td > :heavy_check_mark: </td>
-  </tr>
-  <tr>
-    <td> <a href="bloom.h.adoc">bloom.h</a> </td>
-    <td > :heavy_check_mark: </td>
-  </tr>
-  <tr>
-    <td> <a href="checkpoints.h.adoc">checkpoints.h</a> </td>
-    <td > :heavy_check_mark: </td>
-  </tr>
-  <tr>
-    <td> <a href="checkqueue.h.adoc">checkqueue.h</a> </td>
-    <td > :clock1: </td>
-  </tr>
-  <tr>
-    <td> <a href="clientversion.h.adoc">clientversion.h</a> </td>
-    <td > :clock1: </td>
-  </tr>
-    <tr>
-    <td> <a href="compat.h.adoc">compat.h</a> </td>
-    <td > :heavy_check_mark: </td>
-  </tr>
-  <tr>
-    <td> <a href="crypter.h.adoc">crypter.h</a> </td>
-    <td > :heavy_check_mark: </td>
-  </tr>
-  <tr>
-    <td> <a href="db.h.adoc">db.h</a> </td>
-    <td > :heavy_check_mark: </td>
-  </tr>
-  <tr>
-    <td> <a href="hash.h.adoc">hash.h</a> </td>
-    <td > :heavy_check_mark: </td>
-  </tr>
-  <tr>
-    <td> <a href="init.h.adoc">init.h</a> </td>
-    <td > :clock1: </td>
-  </tr>
-    <tr>
-      <td> <a href="key.h.adoc">key.h</a> </td>
-      <td > :heavy_check_mark: </td>
-    </tr>
-    <tr>
-      <td> <a href="keystore.h.adoc">keystore.h</a> </td>
-      <td > :heavy_check_mark: </td>
-    </tr>
-    <tr>
-      <td> <a href="leveldb.h.adoc">leveldb.h</a> </td>
-      <td > :heavy_check_mark: </td>
-    </tr>
-    <tr>
-      <td> <a href="limitedmap.h.adoc">limitedmap.h</a> </td>
-      <td > :heavy_check_mark: </td>
-    </tr>
-  <tr>
-    <td> <a href="main.h.adoc">main.h</a> </td>
-    <td > :x: </td>
-  </tr>
-  <tr>
-    <td> <a href="mruset.h.adoc">mruset.h</a> </td>
-    <td > :heavy_check_mark: </td>
-  </tr>
-  <tr>
-    <td> <a href="netbase.h.adoc">netbase.h</a> </td>
-    <td > :heavy_check_mark: </td>
-  </tr>
-  <tr>
-    <td> <a href="net.h.adoc">net.h</a> </td>
-    <td  >:x:</td>
-  </tr>
-  <tr>
-    <td> <a href="protocol.h.adoc">protocol.h</a> </td>
-    <td > :heavy_check_mark: </td>
-  </tr>
-  <tr>
-    <td> <a href="script.h.adoc">script.h</a> </td>
-    <td  >:x:</td>
-  </tr>  
-  <tr>
-      <td> <a href="ui_interface.h.adoc">ui_interface.h</a> </td>
-      <td  >:x:</td>
-    </tr>
-  <tr>
-    <td> <a href="serialize.h.adoc">serialize.h</a> </td>
-    <td  >:x:</td>
-  </tr>
-  <tr>
-    <td> <a href="sync.h.adoc">sync.h</a> </td>
-    <td  >:x:</td>
-  </tr>
-  <tr>
-    <td> <a href="threadsafety.h.adoc">threadsafety.h</a> </td>
-    <td  >:x:</td>
-  </tr>
-  <tr>
-    <td> <a href="txdb.h.adoc">txdb.h</a> </td>
-    <td  >:x:</td>
-  </tr>
-  <tr>
-    <td> <a href="uint256.h.adoc">uint256.h</a> </td>
-    <td  >:x:</td>
-  </tr>
-  <tr>
-    <td> <a href="util.h.adoc">util.h</a> </td>
-    <td  >:x:</td>
-  </tr>
-  <tr>
-    <td> <a href="version.h.adoc">version.h</a> </td>
-    <td > :heavy_check_mark: </td>
-  </tr>
-  <tr>
-    <td> <a href="walletdb.h.adoc">walletdb.h</a> </td>
-    <td > :heavy_check_mark: </td>
-  </tr>
-  <tr>
-    <td> <a href="wallet.h.adoc">wallet.h</a> </td>
-    <td  >:x:</td>
-  </tr>
-</table>
+
+头文件 | 状态
+------------ | -------------
+[addrman.h](addrman.h.adoc) | :heavy_check_mark:
+[alert.h](alert.h.adoc) | :heavy_check_mark:
+[allocators.h](allocators.h.adoc) | :x:
+[base58.h](base58.h.adoc) | :heavy_check_mark:
+[bignum.h](bignum.h.adoc) | :heavy_check_mark:
+[bitcoinrpc.h](bitcoinrpc.h.adoc) | :heavy_check_mark:
+[bloom.h](bloom.h.adoc) | :heavy_check_mark:
+[checkpoints.h](checkpoints.h.adoc) | :heavy_check_mark:
+[checkqueue.h](checkqueue.h.adoc) | :clock1:
+[clientversion.h](clientversion.h.adoc) | :clock1:
+[compact.h](compact.h.adoc) | :heavy_check_mark:
+[crypter.h](crypter.h.adoc) | :heavy_check_mark:
+[db.h](db.h.adoc) | :heavy_check_mark:
+[hash.h](hash.h.adoc) | :heavy_check_mark:
+[init.h](init.h.adoc) | :clock1:
+[key.h](key.h.adoc) | :heavy_check_mark:
+[keystore.h](keystore.h.adoc) | :heavy_check_mark:
+[leveldb.h](leveldb.h.adoc) | :heavy_check_mark:
+[limitedmap.h](limitedmap.h.adoc) | :heavy_check_mark:
+[main.h](main.h.adoc) | :x:
+[mruset.h](mruset.h.adoc) | :heavy_check_mark:
+[netbase.h](netbase.h.adoc) | :heavy_check_mark:
+[net.h](net.h.adoc) |:x:
+[protocol.h](protocol.h.adoc) | :heavy_check_mark:
+[script.h](script.h.adoc) |:x:
+[ui_interface.h](ui_interface.h.adoc) |:x:
+[serialize.h](serialize.h.adoc) |:x:
+[sync.h](sync.h.adoc) |:x:
+[threadsafety.h](threadsafety.h.adoc) |:x:
+[txdb.h](txdb.h.adoc) |:x:
+[uint256.h](uint256.h.adoc) |:x:
+[util.h](util.h.adoc) |:x:
+[version.h](version.h.adoc) | :heavy_check_mark:
+[walletdb.h](walletdb.h.adoc) | :heavy_check_mark:
+[wallet.h](wallet.h.adoc) |:x:
+
 
 ### 前置知识
 
@@ -175,7 +68,7 @@
 
 ### 欢迎Issue、PR
 
-### 版本
+### 版本[]
 
 源码的版本是0.8;
 
