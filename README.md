@@ -27,143 +27,143 @@
   </tr>
   <tr>
     <td> <a href="addrman.h.adoc">addrman.h</a> </td>
-    <td bgcolor=SpringGreen> √ </td>
+    <td > :white_check_mark: </td>
   </tr>
   <tr>
     <td> <a href="alert.h.adoc">alert.h</a> </td>
-    <td bgcolor=SpringGreen> √ </td>
+    <td > :white_check_mark: </td>
   </tr>
   <tr>
     <td> <a href="allocators.h.adoc">allocators.h</a> </td>
-    <td bgcolor=OrangeRed > × </td>
+    <td > :x:</td>
   </tr>
   <tr>
     <td> <a href="base58.h.adoc">base58.h</a> </td>
-    <td bgcolor=SpringGreen> √ </td>
+    <td > :white_check_mark: </td>
   </tr>
   <tr>
     <td> <a href="bignum.h.adoc">bignum.h</a> </td>
-    <td bgcolor=SpringGreen> √ </td>
+    <td > :white_check_mark: </td>
   </tr>
   <tr>
     <td> <a href="bitcoinrpc.h.adoc">bitcoinrpc.h</a> </td>
-    <td bgcolor=SpringGreen> √ </td>
+    <td > :white_check_mark: </td>
   </tr>
   <tr>
     <td> <a href="bloom.h.adoc">bloom.h</a> </td>
-    <td bgcolor=SpringGreen> √ </td>
+    <td > :white_check_mark: </td>
   </tr>
   <tr>
     <td> <a href="checkpoints.h.adoc">checkpoints.h</a> </td>
-    <td bgcolor=SpringGreen> √ </td>
+    <td > :white_check_mark: </td>
   </tr>
   <tr>
     <td> <a href="checkqueue.h.adoc">checkqueue.h</a> </td>
-    <td bgcolor=yellow> ... </td>
+    <td > :clock1: </td>
   </tr>
   <tr>
     <td> <a href="clientversion.h.adoc">clientversion.h</a> </td>
-    <td bgcolor=yellow> ... </td>
+    <td > :clock1: </td>
   </tr>
     <tr>
     <td> <a href="compat.h.adoc">compat.h</a> </td>
-    <td bgcolor=SpringGreen> √ </td>
+    <td > :white_check_mark: </td>
   </tr>
   <tr>
     <td> <a href="crypter.h.adoc">crypter.h</a> </td>
-    <td bgcolor=SpringGreen> √ </td>
+    <td > :white_check_mark: </td>
   </tr>
   <tr>
     <td> <a href="db.h.adoc">db.h</a> </td>
-    <td bgcolor=SpringGreen> √ </td>
+    <td > :white_check_mark: </td>
   </tr>
   <tr>
     <td> <a href="hash.h.adoc">hash.h</a> </td>
-    <td bgcolor=SpringGreen> √ </td>
+    <td > :white_check_mark: </td>
   </tr>
   <tr>
     <td> <a href="init.h.adoc">init.h</a> </td>
-    <td bgcolor=yellow> ... </td>
+    <td > :clock1: </td>
   </tr>
     <tr>
       <td> <a href="key.h.adoc">key.h</a> </td>
-      <td bgcolor=SpringGreen> √ </td>
+      <td > :white_check_mark: </td>
     </tr>
     <tr>
       <td> <a href="keystore.h.adoc">keystore.h</a> </td>
-      <td bgcolor=SpringGreen> √ </td>
+      <td > :white_check_mark: </td>
     </tr>
     <tr>
       <td> <a href="leveldb.h.adoc">leveldb.h</a> </td>
-      <td bgcolor=SpringGreen> √ </td>
+      <td > :white_check_mark: </td>
     </tr>
     <tr>
       <td> <a href="limitedmap.h.adoc">limitedmap.h</a> </td>
-      <td bgcolor=SpringGreen> √ </td>
+      <td > :white_check_mark: </td>
     </tr>
   <tr>
     <td> <a href="main.h.adoc">main.h</a> </td>
-    <td bgcolor=OrangeRed> × </td>
+    <td > :x: </td>
   </tr>
   <tr>
     <td> <a href="mruset.h.adoc">mruset.h</a> </td>
-    <td bgcolor=SpringGreen> √ </td>
+    <td > :white_check_mark: </td>
   </tr>
   <tr>
     <td> <a href="netbase.h.adoc">netbase.h</a> </td>
-    <td bgcolor=SpringGreen> √ </td>
+    <td > :white_check_mark: </td>
   </tr>
   <tr>
     <td> <a href="net.h.adoc">net.h</a> </td>
-    <td bgcolor=OrangeRed > X </td>
+    <td  >:x:</td>
   </tr>
   <tr>
     <td> <a href="protocol.h.adoc">protocol.h</a> </td>
-    <td bgcolor=SpringGreen> √ </td>
+    <td > :white_check_mark: </td>
   </tr>
   <tr>
     <td> <a href="script.h.adoc">script.h</a> </td>
-    <td bgcolor=OrangeRed > X </td>
+    <td  >:x:</td>
   </tr>  
   <tr>
       <td> <a href="ui_interface.h.adoc">ui_interface.h</a> </td>
-      <td bgcolor=OrangeRed > X </td>
+      <td  >:x:</td>
     </tr>
   <tr>
     <td> <a href="serialize.h.adoc">serialize.h</a> </td>
-    <td bgcolor=OrangeRed > X </td>
+    <td  >:x:</td>
   </tr>
   <tr>
     <td> <a href="sync.h.adoc">sync.h</a> </td>
-    <td bgcolor=OrangeRed > X </td>
+    <td  >:x:</td>
   </tr>
   <tr>
     <td> <a href="threadsafety.h.adoc">threadsafety.h</a> </td>
-    <td bgcolor=OrangeRed > X </td>
+    <td  >:x:</td>
   </tr>
   <tr>
     <td> <a href="txdb.h.adoc">txdb.h</a> </td>
-    <td bgcolor=OrangeRed > X </td>
+    <td  >:x:</td>
   </tr>
   <tr>
     <td> <a href="uint256.h.adoc">uint256.h</a> </td>
-    <td bgcolor=OrangeRed > X </td>
+    <td  >:x:</td>
   </tr>
   <tr>
     <td> <a href="util.h.adoc">util.h</a> </td>
-    <td bgcolor=OrangeRed > X </td>
+    <td  >:x:</td>
   </tr>
   <tr>
     <td> <a href="version.h.adoc">version.h</a> </td>
-    <td bgcolor=SpringGreen> √ </td>
+    <td > :white_check_mark: </td>
   </tr>
   <tr>
     <td> <a href="walletdb.h.adoc">walletdb.h</a> </td>
-    <td bgcolor=SpringGreen> √ </td>
+    <td > :white_check_mark: </td>
   </tr>
   <tr>
     <td> <a href="wallet.h.adoc">wallet.h</a> </td>
-    <td bgcolor=OrangeRed > X </td>
+    <td  >:x:</td>
   </tr>
 </table>
 
