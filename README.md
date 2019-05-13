@@ -1,7 +1,6 @@
-# bitcoin-notes 比特币源码简单分析
-<a target="_blank" href="http://shang.qq.com/wpa/qunwpa?idkey=0fef5aa161c5074030c3f2e99c6d564a4c68d469f187c08530d270e15714e7c2"><img border="0" src="https://pub.idqqimg.com/wpa/images/group.png" alt="zaobi.org官方群" title="zaobi.org官方群">130313918</a>
+# bitcoin-notes 比特币源码分析
 
-<img border="0" height="300px" src="./images/Q.jpg">
+
 
 ### 吐槽
 
@@ -70,7 +69,7 @@
 
 ### 欢迎Issue、PR
 
-### 版本[]
+### 版本
 
 源码的版本是0.8;
 
